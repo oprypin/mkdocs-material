@@ -29,8 +29,11 @@
     {% set class = class ~ " md-nav__item--active" %}
   {% endif %}
 
+  <!-- Skip level 1 items unless they're in the active tab -->
+  {% if "navigation.tabs" in features and level == 1 and not nav_item.active %}
+
   <!-- Main navigation item with nested items -->
-  {% if nav_item.children %}
+  {% elif nav_item.children %}
 
     <!-- Determine whether to render item as a section -->
     {% if "navigation.sections" in features and level == 1 + (

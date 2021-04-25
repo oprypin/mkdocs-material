@@ -630,19 +630,14 @@
     // Modifier for when navigation tabs are rendered
     &--lifted {
 
-      // Hide nested level 0 items and site title
-      > .md-nav__list > .md-nav__item--nested,
+      // Hide site title
       > .md-nav__title {
         display: none;
       }
 
-      // Hide level 0 items
       > .md-nav__list > .md-nav__item {
-        display: none;
-
         // Active parent navigation item
         &--active {
-          display: block;
           padding: 0;
 
           // Hide nested links
